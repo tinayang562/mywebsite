@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tina Yang — 个人主页</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F2EDE4;
+    --ink: #2B2420;
+    --accent: #A6624B;
+    --muted: #9C8F7C;
+    --rule: #D9CFC0;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 96px 24px 120px;
+  }
+
+  /* ---- Hero ---- */
+  .hero {
+    margin-bottom: 88px;
+  }
+
+  .hero h1 {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    font-size: clamp(2.2rem, 6vw, 3.2rem);
+    margin: 0 0 18px;
+    letter-spacing: -0.01em;
+  }
+
+  .hero .role {
+    color: var(--accent);
+    font-size: 1.05rem;
+    margin: 0 0 28px;
+    font-weight: 500;
+  }
+
+  .hero p.bio {
+    max-width: 52ch;
+    color: var(--ink);
+    font-size: 1.02rem;
+    margin: 0;
+  }
+
+  .contact-row {
+    display: flex;
+    gap: 20px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+
+  .contact-row a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+
+  .contact-row a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* ---- Section headings ---- */
+  section {
+    margin-bottom: 72px;
+  }
+
+  section > h2 {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin: 0 0 32px;
+  }
+
+  /* ---- Work list (no cards, ruled list) ---- */
+  .entry {
+    padding: 28px 0;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 24px;
+  }
+
+  .entry:last-child {
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .entry .period {
+    color: var(--muted);
+    font-size: 0.88rem;
+    padding-top: 3px;
+  }
+
+  .entry h3 {
+    margin: 0 0 8px;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+
+  .entry p {
+    margin: 0 0 10px;
+    color: var(--ink);
+    font-size: 0.96rem;
+  }
+
+  .entry a.link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .entry a.link:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 520px) {
+    .entry {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+  }
+
+  /* ---- Footer ---- */
+  footer {
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="hero">
+    <h1>Tina Yang</h1>
+    <p class="role">这里写你的身份 · 例如：产品设计师 / 前端开发 / 摄影师</p>
+    <p class="bio">
+      在这里写一段简短的自我介绍，两到三句话就够——你是谁、你在做什么、
+      你关心的方向是什么。不用堆砌形容词，用具体的事说清楚自己就好。
+    </p>
+    <div class="contact-row">
+      <a href="mailto:you@example.com">邮箱</a>
+      <a href="https://github.com/tinayang562" target="_blank" rel="noopener">GitHub</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+
+  <section>
+    <h2>作品 / 项目</h2>
+
+    <div class="entry">
+      <div class="period">2026</div>
+      <div>
+        <h3>项目名称一</h3>
+        <p>一句话说明这个项目是做什么的，解决了什么问题，或者你在其中负责什么部分。</p>
+        <a class="link" href="#">查看项目 →</a>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="period">2025</div>
+      <div>
+        <h3>项目名称二</h3>
+        <p>同样，简短说明项目背景和你的角色。可以放链接，也可以放截图说明。</p>
+        <a class="link" href="#">查看项目 →</a>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="period">2024</div>
+      <div>
+        <h3>项目名称三</h3>
+        <p>继续补充你的其他作品或经历，条目数量可以自由增减。</p>
+        <a class="link" href="#">查看项目 →</a>
+      </div>
+    </div>
+
+  </section>
+
+  <section>
+    <h2>关于</h2>
+    <p style="max-width: 56ch;">
+      这里可以写更完整一点的自我介绍，比如你的经历、你正在学习的方向、
+      或者你希望别人如何联系你合作。这部分是可选的，如果嫌页面太长可以删掉。
+    </p>
+  </section>
+
+  <footer>
+    © 2026 Tina Yang
+  </footer>
+
+</div>
+
+</body>
+</html>
