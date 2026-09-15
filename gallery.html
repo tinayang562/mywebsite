@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>作品集 — Tina Yang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Caveat:wght@600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+
+  .page-head {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 72px 24px 6px;
+  }
+
+  .page-head h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.6rem, 7vw, 4.4rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 0.95;
+  }
+
+  .page-head .sub {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--rose);
+    display: inline-block;
+    margin-top: 14px;
+  }
+
+  /* ---------- Category tabs ---------- */
+  .tabs {
+    max-width: 980px;
+    margin: 30px auto 8px;
+    padding: 0 24px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.92rem;
+    padding: 8px 18px;
+    border-radius: 999px;
+    border: 1.3px solid var(--line);
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  }
+
+  .tab-btn:hover { border-color: var(--rose); }
+
+  .tab-btn.active {
+    background: var(--rose);
+    border-color: var(--rose);
+    color: #fff;
+  }
+
+  /* ---------- Grid ---------- */
+  .grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 36px 24px 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 42px 28px;
+  }
+
+  .grid .art-frame:nth-child(3n+2) { margin-top: 18px; }
+
+  .piece { display: none; }
+  .piece.show { display: block; }
+
+  @media (max-width: 860px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 540px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand">Tina Yang</div>
+  <div class="links">
+    <a href="index.html">主页</a>
+    <a href="gallery.html" class="active">作品集</a>
+    <a href="index.html#about">关于</a>
+  </div>
+</nav>
+
+<section class="page-head">
+  <h1>完整作品集</h1><br>
+  <span class="sub">画画、版画、烘焙、还有一些随手写下的话</span>
+</section>
+
+<div class="tabs" id="tabs">
+  <button class="tab-btn active" data-cat="all">全部</button>
+  <button class="tab-btn" data-cat="painting">绘画</button>
+  <button class="tab-btn" data-cat="print">版画</button>
+  <button class="tab-btn" data-cat="baking">烘焙</button>
+  <button class="tab-btn" data-cat="journal">随笔</button>
+</div>
+
+<section class="grid" id="grid">
+
+  <div class="piece show" data-cat="painting">
+    <div class="art-frame">
+      <div class="surface" style="background:linear-gradient(135deg,#C9A19B,#B98A85);">替换为你的作品图片</div>
+      <div class="cap-row">
+        <div class="cap-title">静物一</div>
+        <div class="swatch-tag"><span class="dot" style="background:#B98A85;"></span><span class="name">绘画</span><span class="meta">· 2026</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="piece show" data-cat="print">
+    <div class="art-frame">
+      <div class="surface" style="background:linear-gradient(135deg,#8FA0A8,#4F5D6B);">替换为你的作品图片</div>
+      <div class="cap-row">
+        <div class="cap-title">木刻 No.3</div>
+        <div class="swatch-tag"><span class="dot" style="background:#4F5D6B;"></span><span class="name">版画</span><span class="meta">· 2025</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="piece show" data-cat="baking">
+    <div class="art-frame">
+      <div class="surface" style="background:linear-gradient(135deg,#D2A46E,#74784F);">替换为你的作品图片</div>
+      <div class="cap-row">
+        <div class="cap-title">柠檬磅蛋糕</div>
+        <div class="swatch-tag"><span class="dot" style="background:#74784F;"></span><span class="name">烘焙配方</span><span class="meta">· 2025</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="piece show" data-cat="journal">
+    <div class="art-frame">
+      <div class="surface" style="background:linear-gradient(135deg,#B98A85,#4F5D6B);">替换为你的照片或手写页</div>
+      <div class="cap-row">
+        <div class="cap-title">九月的一些碎碎念</div>
+        <div class="swatch-tag"><span class="dot" style="background:#B98A85;"></span><span class="name">随笔</span><span class="meta">· 2026</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="piece show" data-cat="painting">
+    <div class="art-frame">
+      <div class="surface" style="background:linear-gradient(135deg,#B98A85,#74784F);">替换为你的作品图片</div>
+      <div class="cap-row">
+        <div class="cap-title">窗边</div>
+        <div class="swatch-tag"><span class="dot" style="background:#B98A85;"></span><span class="name">绘画</span><span class="meta">· 2025</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="piece show" data-cat="baking">
+    <div class="art-frame">
+      <div class="surface" style="background:linear-gradient(135deg,#D2A46E,#4F5D6B);">替换为你的作品图片</div>
+      <div class="cap-row">
+        <div class="cap-title">桂花米糕</div>
+        <div class="swatch-tag"><span class="dot" style="background:#74784F;"></span><span class="name">烘焙配方</span><span class="meta">· 2024</span></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<footer style="max-width:980px;margin:0 auto;padding:0 24px 60px;color:var(--slate);font-size:0.85rem;">
+  © 2026 Tina Yang
+</footer>
+
+<script>
+  const tabs = document.querySelectorAll('.tab-btn');
+  const pieces = document.querySelectorAll('.piece');
+
+  function setActive(cat) {
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.cat === cat));
+    pieces.forEach(p => {
+      p.classList.toggle('show', cat === 'all' || p.dataset.cat === cat);
+    });
+  }
+
+  tabs.forEach(btn => {
+    btn.addEventListener('click', () => setActive(btn.dataset.cat));
+  });
+
+  const hash = window.location.hash.replace('#', '');
+  if (hash) setActive(hash);
+</script>
+
+</body>
+</html>
